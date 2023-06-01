@@ -25,13 +25,74 @@
 .profile {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+   justify-content: space-between;
+   align-items: center;
     width: 68.75%;
     margin: 0 auto;
     padding-top: 40px;
 }
 
+.profile__information {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile__edit {
+    max-width: 336px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+    align-items: end;
+}
+
+.profile__edit-button {
+    background-color: transparent;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.profile__add-button {
+    background-color: transparent;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border: none;
+    padding: 0;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    color: #FFFFFF;
+}
+
 .profile__avatar {
+    padding-right: 30px;
+}
+.profile__image {
     max-width: 120px;
     border-radius: 50%;
+}
+
+.profile__name {
+    padding-top: 22px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: inter;
+font-size: 42px;
+font-weight: 500;
+line-height: 48px;
+}
+
+.profile__description {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
 }
