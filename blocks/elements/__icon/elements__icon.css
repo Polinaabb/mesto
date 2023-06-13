@@ -1,4 +1,4 @@
-.element__icon {
+.elements__icon {
     width: 22px;
     height: 19px;
     background-color: transparent;
@@ -8,6 +8,6 @@
     padding-top: 30px;
 }
 
-.element__icon:hover {
+.elements__icon:hover {
     opacity: 0.5;
 }
