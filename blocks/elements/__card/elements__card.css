@@ -32,7 +32,7 @@
 
 @media screen and (max-width: 1000px) {
     .elements__card {
-        max-width: 296px
+        max-width: 296px;
     }
 }
 
