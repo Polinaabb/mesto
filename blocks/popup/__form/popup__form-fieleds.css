@@ -1,0 +1,18 @@
+.popup__form-fieleds {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 83.26%;
+    margin-top: 54px;
+}
+
+
+.popup__form-fieleds::placeholder {
+    color: #000000;
+}
+
+@media screen and (max-width: 320px) {
+    .popup__form-fieleds {
+        margin-top: 75px;
+    }
+}
