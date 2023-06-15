@@ -1,4 +1,4 @@
-.popup__form-fieleds {
+.popup__container-fieleds {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
@@ -6,13 +6,8 @@
     margin-top: 54px;
 }
 
-
-.popup__form-fieleds::placeholder {
-    color: #000000;
-}
-
 @media screen and (max-width: 320px) {
-    .popup__form-fieleds {
+    .popup__container-fieleds {
         margin-top: 75px;
     }
 }

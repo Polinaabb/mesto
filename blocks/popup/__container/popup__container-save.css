@@ -1,11 +1,12 @@
 
-.popup__form-save {
+.popup__container-save {
     background-color: #000000;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    padding-top: 14px;
+    padding-bottom: 18px;
     margin-top: 18px;
     font-size: 18px;
     font-weight: 400;
@@ -13,13 +14,14 @@
 }
 
 @media screen and (max-width: 320px) {
-    .popup__form-save {
+    .popup__container-save {
         margin-top: 15px;
         font-size: 14px;
         line-height: 16.94px;
+        padding-bottom: 14px;
     }
 }
 
-.popup__form-save:hover {
+.popup__container-save:hover {
     opacity: 0.8;
 }

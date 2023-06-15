@@ -1,8 +1,10 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/font.css);
 @import url(../blocks/page/page.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/profile/profile.css);
-@import url(../blocks/profile/profile-info.css);
+@import url(../blocks/profile/__info/profile__info.css);
 @import url(../blocks/profile/__information/profile__information.css);
 @import url(../blocks/profile/__edit/profile__edit.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
@@ -10,7 +12,6 @@
 @import url(../blocks/profile/__add-button/profile__add-button.css);
 @import url(../blocks/profile/__add-button/profile__add-button-image.css);
 @import url(../blocks/profile/__avatar/profile__avatar.css);
-@import url(../blocks/profile/__image/profile__image.css);
 @import url(../blocks/profile/__name/profile__name.css);
 @import url(../blocks/profile/__description/profile__description.css);
 @import url(../blocks/elements/elements.css);
@@ -24,12 +25,10 @@
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__container/popup__container.css);
-@import url(../blocks/popup/__form/popup__form.css);
-@import url(../blocks/popup/__form/popup__form-title.css);
-@import url(../blocks/popup/__form/popup__form-fieleds.css);
-@import url(../blocks/popup/__form/popup__form-name.css);
-@import url(../blocks/popup/__form/popup__form-profession.css);
-@import url(../blocks/popup/__form/popup__form-save.css);
-@import url(../blocks/popup/__icon/popup__icon.css);
+@import url(../blocks/popup/__container/popup__container-fieleds.css);
+@import url(../blocks/popup/__container/popup__container-name.css);
+@import url(../blocks/popup/__container/popup__container-job.css);
+@import url(../blocks/popup/__container/popup__container-save.css);
+@import url(../blocks/popup/__container/popup__container-title.css);
 @import url(../blocks/popup/__close/popup__close.css);
 

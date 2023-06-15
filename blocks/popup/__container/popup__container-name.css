@@ -1,5 +1,5 @@
-.popup__form-profession {
-    height: 27px;
+.popup__container-name {
+    padding-bottom: 13px;
     border: none;
     outline: none;
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
@@ -7,3 +7,4 @@
     font-weight: 400;
     line-height: 17px;
 }
+
