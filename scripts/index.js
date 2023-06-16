@@ -4,8 +4,8 @@ let buttonClick = document.querySelector(".profile__edit-button");
 let profileName = document.querySelector(".profile__name");
 let profileDescription = document.querySelector(".profile__description");
 let buttonClose = document.querySelector(".popup__close");
-let nameInput = document.querySelector(".popup__container_type_name");
-let jobInput = document.querySelector(".popup__container_type_job");
+let nameInput = document.querySelector(".popup__fieled_type_name");
+let jobInput = document.querySelector(".popup__fieled_type_job");
 
 
 buttonClick.addEventListener("click", function () {
