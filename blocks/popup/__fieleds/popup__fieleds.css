@@ -1,13 +1,13 @@
-.popup__container-fieleds {
+.popup__fieleds {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
     width: 83.26%;
-    margin-top: 54px;
+    margin-top: 48px;
+    margin-left: 36px;
 }
 
 @media screen and (max-width: 320px) {
-    .popup__container-fieleds {
+    .popup__fieleds {
         margin-top: 75px;
     }
 }

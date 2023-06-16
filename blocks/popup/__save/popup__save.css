@@ -1,20 +1,22 @@
 
-.popup__container-save {
+.popup__save {
     background-color: #000000;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 14px;
-    padding-bottom: 18px;
-    margin-top: 18px;
+    padding-bottom: 14px;
     font-size: 18px;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 21.78px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 2px;
 }
 
 @media screen and (max-width: 320px) {
-    .popup__container-save {
+    .popup__save {
         margin-top: 15px;
         font-size: 14px;
         line-height: 16.94px;

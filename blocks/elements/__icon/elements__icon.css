@@ -9,6 +9,7 @@
     cursor: pointer;
     border: none;
     margin-top: 30px;
+    flex-shrink: 0;
 }
 
 .elements__icon:hover {
