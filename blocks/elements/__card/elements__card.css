@@ -1,43 +1,8 @@
 .elements__card {
     max-width: 282px;
+    height: 361px;
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
     border-radius: 10px;
-}
-
-@media screen and (max-width: 1275px) {
-    .elements__card {
-        max-width: 270px;
-    }
-}
-
-@media screen and (max-width: 1227px) {
-    .elements__card {
-        max-width: 255px;
-    }
-}
-
-@media screen and (max-width: 1143px) {
-    .elements__card {
-        max-width: 240px;
-    }
-}
-
-@media screen and (max-width: 1116px) {
-    .elements__card {
-        max-width: 225px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .elements__card {
-        max-width: 296px;
-    }
-}
-
-@media screen and (max-width: 444px) {
-    .elements__card {
-        width: 282px;
-    }
 }
