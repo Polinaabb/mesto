@@ -1,6 +1,11 @@
 .profile__edit {
     max-width: 336px;
     display: flex;
-    flex-direction: row;
-    align-items: end;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 950px) {
+    .profile__edit {
+        align-items: center;
+    }
 }

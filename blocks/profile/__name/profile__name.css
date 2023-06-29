@@ -1,9 +1,9 @@
 .profile__name {
     max-width: 294px;
     padding-top: 22px;
-    padding-right: 18px;
     margin-top: 0;
     margin-bottom: 0;
+    margin-right: 18px;
     color: #FFFFFF;
     font-size: 42px;
     font-weight: 500;
@@ -15,9 +15,11 @@
 
 @media screen and (max-width: 888px) {
     .profile__name {
+        max-width: 189px;
         font-size: 27px;
         line-height: 33px;
         padding-top: 26px;
-        padding-left: 45px;
+        padding-left: 30px;
+        margin-right: 0;
     }
 }
