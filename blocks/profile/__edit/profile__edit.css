@@ -1,7 +1,8 @@
 .profile__edit {
     max-width: 336px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 18px;
 }
 
 @media screen and (max-width: 950px) {

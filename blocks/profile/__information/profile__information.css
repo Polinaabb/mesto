@@ -1,4 +1,5 @@
 .profile__information {
+    max-width: 282px;
     display: flex;
     flex-direction: row;
 }
