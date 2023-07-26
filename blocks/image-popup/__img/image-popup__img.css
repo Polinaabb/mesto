@@ -1,0 +1,7 @@
+.image-popup__img {
+    max-width: 75vw;
+    object-position: center;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
