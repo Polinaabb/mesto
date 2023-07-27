@@ -1,4 +1,4 @@
-.image-popup__close {
+.popup_image-close {
     background-image: url(../../../images/close-icon.svg);
     background-color: transparent;
     background-size: cover;
@@ -11,14 +11,14 @@
 }
 
 @media screen and (max-width: 730px) {
-    .image-popup__close {
+    .popup_image-close {
         width: 20px;
         height: 20px;
     }
 }
 
 @media screen and (max-width: 400px) {
-    .image-popup__close {
+    .popup_image-close {
         top: -28px;
         right: 0;
     }

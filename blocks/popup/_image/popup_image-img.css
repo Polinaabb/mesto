@@ -1,7 +1,6 @@
-.image-popup__img {
+.popup_image-img {
     max-width: 75vw;
     object-position: center;
     object-fit: contain;
     flex-shrink: 0;
 }
-
