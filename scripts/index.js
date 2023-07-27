@@ -1,6 +1,7 @@
 const popups = document.querySelectorAll(".popup")
 const popup = document.querySelector(".popup");
-const popupAdd = document.querySelector(".popup_add")
+const popupAdd = document.querySelector(".popup_add");
+
 const popupContainer = document.querySelector(".popup__container");
 const buttonEdit = document.querySelector(".profile__edit-button");
 const buttonAdd = document.querySelector(".profile__add-button");
@@ -138,7 +139,7 @@ const deleteCard = (e) => {
 }
 
 const imagePopup = document.querySelector(".popup_image");
-const titlePopup = document.querySelector(".popup__title_image");
+const titlePopup = document.querySelector(".popup__name");
 const imgPopup = document.querySelector(".popup__image");
 const titleCard = document.querySelector(".elements__name");
 const imageCard = document.querySelector(".elements__image");
