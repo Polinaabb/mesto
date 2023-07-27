@@ -138,12 +138,12 @@ const deleteCard = (e) => {
 }
 
 const imagePopup = document.querySelector(".popup_image");
-const titlePopup = document.querySelector(".popup_image_title");
-const imgPopup = document.querySelector(".popup_image_img");
+const titlePopup = document.querySelector(".popup__title_image");
+const imgPopup = document.querySelector(".popup__image");
 const titleCard = document.querySelector(".elements__name");
 const imageCard = document.querySelector(".elements__image");
 const imageOpenBt = document.querySelectorAll(".elements__image");
-const imageClose = document.querySelector(".popup_image_close");
+const imageClose = document.querySelector(".popup__close_image");
 
 const openCard = (e) => {
   const card = e.target.closest(".elements__card");
