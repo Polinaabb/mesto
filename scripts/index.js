@@ -7,7 +7,7 @@ const buttonAdd = document.querySelector(".profile__add-button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const buttonClose = document.querySelector(".popup__close");
-const buttonCloseAdd = document.querySelector(".popup-add__close");
+const buttonCloseAdd = document.querySelector(".popup_add__close");
 const nameInput = document.querySelector(".popup__fieled_type_name");
 const jobInput = document.querySelector(".popup__fieled_type_job");
 
@@ -138,12 +138,12 @@ const deleteCard = (e) => {
 }
 
 const imagePopup = document.querySelector(".popup_image");
-const titlePopup = document.querySelector(".popup_image-title");
-const imgPopup = document.querySelector(".popup_image-img");
+const titlePopup = document.querySelector(".popup_image__title");
+const imgPopup = document.querySelector(".popup_image__img");
 const titleCard = document.querySelector(".elements__name");
 const imageCard = document.querySelector(".elements__image");
 const imageOpenBt = document.querySelectorAll(".elements__image");
-const imageClose = document.querySelector(".popup_image-close");
+const imageClose = document.querySelector(".popup_image__close");
 
 const openCard = (e) => {
   const card = e.target.closest(".elements__card");
