@@ -1,4 +1,4 @@
-const popups = document.querySelectorAll(".popup")
+
 const popup = document.querySelector(".popup");
 const popupAdd = document.querySelector(".popup_add");
 
@@ -12,30 +12,54 @@ const buttonCloseAdd = document.querySelector(".popup__close_add");
 const nameInput = document.querySelector(".popup__fieled_type_name");
 const jobInput = document.querySelector(".popup__fieled_type_job");
 
-function openPopup(index) {
-  popups[index].classList.add("popup_opened");
+//function openPopup() {
+
+//}
+
+//function closePopup() {
+
+//}
+
+const openPopupEdid = () => {
+  popup.classList.add("popup_opened");
 }
 
-function closePopup(index) {
-  popups[index].classList.remove("popup_opened");
+const openPopupAdd = () => {
+  popupAdd.classList.add("popup_opened");
+}
+
+const openPopupImg = () => {
+  imagePopup.classList.add("popup_opened");
+}
+
+const closePopupEdit = () => {
+  popup.classList.remove("popup_opened");
+}
+
+const closePopupAdd = () => {
+  popupAdd.classList.remove("popup_opened");
+}
+
+const closePopupImg = () => {
+  imagePopup.classList.remove("popup_opened");
 }
 
 buttonEdit.addEventListener("click", function () {
-  openPopup(0);
+  openPopupEdid();
   nameInput.value = profileName.textContent;
   jobInput.value = profileDescription.textContent;
 });
 
 buttonAdd.addEventListener("click", function () {
-  openPopup(1);
+  openPopupAdd();
 });
 
 buttonClose.addEventListener("click", function () {
-  closePopup(0);
+  closePopupEdit();
 });
 
 buttonCloseAdd.addEventListener("click", function () {
-  closePopup(1);
+  closePopupAdd();
 });
 
 function handleFormSubmitEdit(evt) {
@@ -43,7 +67,7 @@ function handleFormSubmitEdit(evt) {
   profileName.textContent = nameInput.value;
   profileDescription.textContent = jobInput.value;
 
-  closePopup(0);
+  closePopupEdit();
 };
 
 popupContainer.addEventListener('submit', handleFormSubmitEdit);
@@ -95,7 +119,7 @@ function handleFormSubmitAdd(evt) {
 
   elements.prepend(newCard);
 
-  closePopup(1)
+  closePopupAdd()
 };
 
 popupContainerAdd.addEventListener('submit', handleFormSubmitAdd);
@@ -152,16 +176,16 @@ const openCard = (e) => {
   const titleCard = card.querySelector(".elements__name");
   const imageCard = card.querySelector(".elements__image");
 
-  buttonOpenCardImage.addEventListener("click", () => openCard(e));
-
-  openPopup(2);
-  titlePopup.textContent = titleCard.textContent;
-  imgPopup.src = imageCard.src;
-  imageCard.alt = titleCard.textContent;
+  buttonOpenCardImage.addEventListener("click", function () {
+    openPopupImg();
+    titlePopup.textContent = titleCard.textContent;
+    imgPopup.src = imageCard.src;
+    imagePopup.alt = titleCard.textContent;
+  });
 };
 
 imageClose.addEventListener("click", function () {
-  closePopup(2);
+  closePopupImg();
 });
 
 render();
