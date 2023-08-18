@@ -12,38 +12,33 @@ const buttonCloseAdd = document.querySelector(".popup__close_add");
 const nameInput = document.querySelector(".popup__fieled_type_name");
 const jobInput = document.querySelector(".popup__fieled_type_job");
 
+function popupCloseEcs(evt) {
+  if(evt.key === "Escape"){
+    const opened = document.querySelector(".popup_opened");
+    closePopup(opened);
+  };
+}
+
+function popupCloseOverlay(evt) {
+  if (evt.target.classList.contains("popup")) {
+    closePopup(evt.target)
+  }
+}
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
+  document.addEventListener("click", popupCloseOverlay);
+  document.addEventListener("keydown", popupCloseEcs);
 }
 
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
+  document.removeEventListener("click", popupCloseOverlay);
+  document.addEventListener("keydown", popupCloseEcs);
 }
 
-// const openPopupEdit = () => {
-//   popup.classList.add("popup_opened");
-// }
 
-// const openPopupAdd = () => {
-//   popupAdd.classList.add("popup_opened");
-// }
 
-// const openPopupImg = () => {
-//   imagePopup.classList.add("popup_opened");
-// }
-
-// const closePopupEdit = () => {
-//   popup.classList.remove("popup_opened");
-// }
-
-// const closePopupAdd = () => {
-//   popupAdd.classList.remove("popup_opened");
-// }
-
-// const closePopupImg = () => {
-//   imagePopup.classList.remove("popup_opened");
-// }
 
 buttonEdit.addEventListener("click", function () {
   openPopup(popup);
@@ -154,6 +149,7 @@ const createCardTemplate = (data) => {
   const buttonOpenPopupImage = card.querySelector(".elements__image");
   buttonOpenPopupImage.addEventListener("click", () => openCard(data))
 
+
   return card;
 }
 
@@ -171,17 +167,15 @@ const imageOpenBt = document.querySelectorAll(".elements__image");
 const imageClose = document.querySelector(".popup__close_image");
 
 const openCard = (data) => {
-    openPopup(imagePopup);
-    titlePopup.textContent = data.name;
-    imgPopup.src = data.link;
-    imagePopup.alt = data.name;
-  }
+  openPopup(imagePopup);
+  titlePopup.textContent = data.name;
+  imgPopup.src = data.link;
+  imagePopup.alt = data.name;
+}
 
 imageClose.addEventListener("click", function () {
   closePopup(imagePopup);
 });
 
 render();
-
-
 
