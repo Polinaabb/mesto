@@ -1,6 +1,7 @@
 
 const popupEdit = document.querySelector(".popup");
 const popupAdd = document.querySelector(".popup_add");
+const popupForm = document.querySelector(".popup__fieleds");
 const popupContainer = popupEdit.querySelector(".popup__container");
 const buttonEdit = document.querySelector(".profile__edit-button");
 const buttonAdd = document.querySelector(".profile__add-button");
@@ -10,7 +11,6 @@ const buttonCloseEdit = popupEdit.querySelector(".popup__close");
 const buttonCloseAdd = document.querySelector(".popup__close_add");
 const nameInput = document.querySelector(".popup__fieled_type_name");
 const jobInput = document.querySelector(".popup__fieled_type_job");
-const formElementAdd = document.querySelector(".popup__fieleds_add");
 const settings = {
   formSelector: ".popup__fieleds",
   inputSelector: ".popup__fieled",
@@ -36,7 +36,7 @@ function popupCloseOverlay(evt) {
 function openPopup(popupEdit) {
   popupEdit.classList.add("popup_opened");
   popupEdit.addEventListener("click", popupCloseOverlay);
-  popupEdit.addEventListener("keydown", popupCloseEcs);
+  document.addEventListener("keydown", popupCloseEcs);
 }
 
 function closePopup(popupEdit) {
@@ -70,7 +70,7 @@ function handleFormSubmitEdit(evt) {
   closePopup(popupEdit);
 };
 
-popupEdit.addEventListener('submit', handleFormSubmitEdit);
+popupForm.addEventListener('submit', handleFormSubmitEdit);
 
 
 const elements = document.querySelector(".elements");
@@ -95,7 +95,8 @@ function handleFormSubmitAdd(evt) {
 
   closePopup(popupAdd);
 }
-popupContainerAdd.addEventListener('submit', handleFormSubmitAdd);
+
+popupForm.addEventListener('submit', handleFormSubmitAdd);
 
 
 const render = () => {
