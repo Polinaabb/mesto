@@ -6,9 +6,15 @@
     margin-left: 36px;
 }
 
+@media screen and (max-width: 455px) {
+    .popup__fieleds {
+        margin-top: 65px;
+        margin-left: 25px;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .popup__fieleds {
-        margin-top: 75px;
-        margin-left: 25px;
+        margin-top: 60px;
     }
 }
