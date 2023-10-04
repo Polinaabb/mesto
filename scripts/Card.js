@@ -1,11 +1,12 @@
-import { titlePopup, imgPopup, popupImage, openPopup } from "./index.js";
+import { titlePopup, imgPopup, popupImage, openPopup  } from "./index.js";
 
 export class Card {
-    constructor(data, templateSelector) {
+    constructor(data, templateSelector, likeCard) {
       this._name = data.name;
       this._link = data.link;
       this._alt = data.name;
       this._templateSelector = templateSelector
+      this._likeCard = likeCard;
     }
   
     _getTemplate() {
@@ -28,7 +29,7 @@ export class Card {
     }
   
     _like() {
-      this._element.querySelector('.elements__icon').classList.toggle('elements__icon_active');
+      this._element.querySelector('.elements__icon').classList.toggle('elements__icon_active'); 
     }
   
     _delete() {
@@ -43,10 +44,10 @@ export class Card {
     }
   
     _setEventListeners() {
-      this._element
-        .querySelector('.elements__icon')
+      this._element 
+        .querySelector('.elements__icon') 
         .addEventListener('click', () => {
-          this._like();
+        this._like();
         })
       this._element
         .querySelector('.elements__delete')

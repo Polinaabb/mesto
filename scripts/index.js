@@ -1,4 +1,4 @@
-import { settings } from "./validate.js";
+
 import { FormValidator } from "./FormValidator.js";
 import { initialCards } from "./cards.js";
 import { Card } from "./Card.js";
@@ -15,6 +15,18 @@ const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const nameInput = document.querySelector(".popup__fieled_type_name");
 const jobInput = document.querySelector(".popup__fieled_type_job");
+const elements = document.querySelector(".elements");
+const titlePopup = document.querySelector('.popup__name');
+const imgPopup = document.querySelector('.popup__image');
+const likeCard = document.querySelector('.elements__icon');
+const settings = {
+  formSelector: ".popup__fieleds",
+  inputSelector: ".popup__fieled",
+  submitButtonSelector: ".popup__save",
+  inactiveButtonClass: "popup__save_inactive",
+  inputErrorClass: "popup__fieled_type_error",
+  errorClass: "popup__fieled-error_active",
+};
 
 // функция закрытия попап ESCAPE
 function popupCloseEcs(evt) {
@@ -81,20 +93,26 @@ function handleFormSubmitEdit(evt) {
 popupFormEdit.addEventListener('submit', handleFormSubmitEdit);
 
 
-const elements = document.querySelector(".elements");
+export { titlePopup, imgPopup, popupImage, openPopup };
 
+const createCard = (item) => {
+  const card = new Card(item, '.template');
+  return card.generateCard();
+}
 
 // функция сохранения данных по нажатию кнопки эд
 function handleFormSubmitAdd(evt) {
   evt.preventDefault();
 
-  const newCard = createCardTemplate({ name: titleInput.value, link: linkInput.value });
-  titleInput.value = '';
-  linkInput.value = '';
-  evt.submitter.classList.add('popup__save_inactive')
-  evt.submitter.disabled = true;
+  const cardsInfo = {
+    name: titlePopup.value,
+    link: imgPopup.value
+  }
+  createCard(cardsInfo, '.template');
+  document.querySelector('.elements').prepend(createCard(cardsInfo));
+  formElementAdd.reset();
 
-  elements.prepend(newCard);
+  validatorformElAdd.toggleButtonState()
 
   closePopup(popupAdd);
 }
@@ -102,79 +120,19 @@ function handleFormSubmitAdd(evt) {
 // слушатель сабмита ед
 popupFormAdd.addEventListener('submit', handleFormSubmitAdd);
 
-
-const titlePopup = document.querySelector('.popup__name');
-const imgPopup = document.querySelector('.popup__image');
-
-export { titlePopup, imgPopup, popupImage, openPopup };
-
 initialCards.forEach((item) => {
-  const card = new Card(item, '.template');
-  const cardElement = card.generateCard();
-
-  document.querySelector('.elements').append(cardElement);
+  createCard(item, '.template')
+  document.querySelector('.elements').append(createCard(item));
 });
 
-const formList = document.querySelectorAll('.popup__fieleds');
 
-formList.forEach((formElement) => {
-  const formValidator = new FormValidator(formElement, settings);
-  formValidator.enableValidation()
-})
+const formElementEdit = document.querySelector('.popup__fieleds_edit');
+const formElementAdd = document.querySelector('.popup__fieleds_add');
 
+const validatorformElEdit = new FormValidator(formElementEdit, settings);
+validatorformElEdit.enableValidation();
 
-
-
-
+const validatorformElAdd = new FormValidator(formElementAdd, settings);
+validatorformElAdd.enableValidation(console.log('hello'));
 
 
-
-// функция добавления template-элемента в DOM
-// const render = () => {
-//   initialCards.forEach((item) => {
-
-//     elements.append(createCardTemplate(item));
-//   });
-// };
-
-// // функция создания карточки
-// const createCardTemplate = (data) => {
-//   const card = template.content.cloneNode(true);
-
-//   const image = card.querySelector(".elements__image");
-//   const name = card.querySelector(".elements__name");
-
-//   image.src = data.link;
-//   image.alt = data.name;
-//   name.textContent = data.name;
-
-//   const likeButton = card.querySelector(".elements__icon");
-//   likeButton.addEventListener("click", function (evt) {
-//     evt.target.classList.toggle("elements__icon_active");
-//   });
-
-//   const deleteButton = card.querySelector(".elements__delete");
-//   deleteButton.addEventListener("click", deleteCard);
-
-//   const buttonOpenPopupImage = card.querySelector(".elements__image");
-//   buttonOpenPopupImage.addEventListener("click", () => openCard(data))
-
-
-//   return card;
-// }
-
-// // функция удаления карточки
-// const deleteCard = (e) => {
-//   const card = e.target.closest(".elements__card");
-//   card.remove();
-// }
-
-// // функция открытия попапа имейдж
-// const openCard = (data) => {
-//   openPopup(popupImage);
-//   titlePopup.textContent = data.name;
-//   imgPopup.src = data.link;
-//   popupImage.alt = data.name;
-// }
-
-// render();
