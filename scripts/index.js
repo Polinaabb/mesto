@@ -133,6 +133,6 @@ const validatorformElEdit = new FormValidator(formElementEdit, settings);
 validatorformElEdit.enableValidation();
 
 const validatorformElAdd = new FormValidator(formElementAdd, settings);
-validatorformElAdd.enableValidation(console.log('hello'));
+validatorformElAdd.enableValidation();
 
 
