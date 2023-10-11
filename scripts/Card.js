@@ -1,35 +1,36 @@
-import { titlePopup, imgPopup, popupImage, openPopup  } from "./index.js";
+import { titlePopup, imgPopup, popupImage, openPopup } from "./index.js";
 
 export class Card {
-    constructor(data, templateSelector, likeCard) {
+    constructor(data, templateSelector) {
       this._name = data.name;
       this._link = data.link;
       this._alt = data.name;
-      this._templateSelector = templateSelector
-      this._likeCard = likeCard;
+      this._templateSelector = templateSelector;
     }
   
     _getTemplate() {
-      const cardElement = document
-        .querySelector(this._templateSelector)
-        .content.querySelector('.elements__card')
-        .cloneNode(true);
-  
-      return cardElement;
-    }
+        return document
+          .querySelector(this._templateSelector)
+          .content.querySelector('.elements__card')
+          .cloneNode(true);
+    } 
+    
   
     generateCard() {
       this._element = this._getTemplate();
-      this._setEventListeners();
-  
-      this._element.querySelector('.elements__image').src = this._link;
+    
       this._element.querySelector('.elements__name').textContent = this._name;
+      this._element.querySelector('.elements__image').src = this._link;
+      this._element.querySelector('.elements__image').alt = this._link;
+
+      this._setEventListeners();
   
       return this._element;
     }
   
     _like() {
-      this._element.querySelector('.elements__icon').classList.toggle('elements__icon_active'); 
+      const likeCard = this._element.querySelector('.elements__icon');
+      likeCard.classList.toggle('elements__icon_active'); 
     }
   
     _delete() {
