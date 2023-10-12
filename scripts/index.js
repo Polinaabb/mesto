@@ -15,6 +15,8 @@ const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const nameInput = document.querySelector(".popup__fieled_type_name");
 const jobInput = document.querySelector(".popup__fieled_type_job");
+const titleInput = document.querySelector('.popup__fieled_type_title');
+const imageInput = document.querySelector('.popup__fieled_type_link');
 const titlePopup = document.querySelector('.popup__name');
 const imgPopup = document.querySelector('.popup__image');
 const settings = {
@@ -93,8 +95,8 @@ function handleFormSubmitAdd(evt) {
   evt.preventDefault();
 
   const cardInfo = {
-    name: titlePopup.value,
-    link: imgPopup.value }
+    name: titleInput.value,
+    link: imageInput.value }
     createCard(cardInfo, '.template');
     document.querySelector('.elements').prepend(createCard(cardInfo));
   formElementAdd.reset();
